@@ -1,0 +1,6 @@
+1)Start from the source node.
+2)Mark the node as visited.
+3)Print the node.
+4)Visit each unvisited adjacent node recursively.
+5)If no unvisited node exists, backtrack.
+6)Repeat until all nodes are visited.
