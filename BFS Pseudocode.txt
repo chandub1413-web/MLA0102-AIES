@@ -1,0 +1,15 @@
+START
+Create a graph
+Create an empty visited list
+Create a queue and insert starting node
+
+WHILE queue is not empty
+    Remove first node from queue
+    IF node is not visited
+        Mark node as visited
+        Add all adjacent nodes to queue
+    END IF
+END WHILE
+
+Print visited nodes
+STOP
