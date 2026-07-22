@@ -1,0 +1,19 @@
+import heapq
+
+graph = {
+    'A':[('B',1),('C',4)],
+    'B':[('D',2)],
+    'C':[('D',1)],
+    'D':[]
+}
+
+pq=[(0,'A')]
+visited=[]
+
+while pq:
+    cost,node=heapq.heappop(pq)
+    if node not in visited:
+        visited.append(node)
+        print(node,cost)
+        for n,c in graph[node]:
+            heapq.heappush(pq,(cost+c,n))
