@@ -1,0 +1,5 @@
+1)Insert source node with cost 0.
+2)Remove the node with the smallest cost.
+3)If destination is reached, stop.
+4)Otherwise, add neighbors with updated cost.
+5)Repeat.
