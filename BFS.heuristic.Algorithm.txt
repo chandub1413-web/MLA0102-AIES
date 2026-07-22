@@ -1,0 +1,4 @@
+1)Start from the source.
+2)Select the node with the smallest heuristic value.
+3)Visit it.
+4)Continue until the goal is found.
