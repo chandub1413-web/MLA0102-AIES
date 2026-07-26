@@ -1,0 +1,21 @@
+scores = [3, 5, 2, 9]
+
+def alpha_beta(scores):
+    alpha = float('-inf')
+    beta = float('inf')
+
+    left = min(scores[0], scores[1])
+    alpha = max(alpha, left)
+
+    right = scores[2]
+
+    if right <= alpha:
+        print("Value 9 is pruned")
+    else:
+        right = min(scores[2], scores[3])
+
+    return max(left, right)
+
+best_score = alpha_beta(scores)
+
+print("Best score:", best_score)

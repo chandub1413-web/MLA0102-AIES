@@ -1,0 +1,9 @@
+Alpha-Beta Pruning
+1)Start from the root node.
+2)Set alpha to negative infinity.
+3)Set beta to positive infinity.
+4)Explore the game tree using Minimax.
+5)Update alpha when the MAX player finds a better value.
+6)Update beta when the MIN player finds a better value.
+7)If alpha >= beta, stop exploring that branch.
+8)Return the optimal value.
