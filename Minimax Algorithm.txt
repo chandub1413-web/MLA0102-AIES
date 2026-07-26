@@ -1,0 +1,7 @@
+Minimax Algorithm
+1)Create the game tree with possible scores.
+2)The MAX player tries to select the highest score.
+3)The MIN player tries to select the lowest score.
+4)Evaluate all terminal nodes.
+5)Return the best value to the root.
+6)Select the move with the maximum value.

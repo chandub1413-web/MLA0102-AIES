@@ -1,0 +1,11 @@
+scores = [3, 5, 2, 9]
+
+def minimax(scores):
+    left = min(scores[0], scores[1])
+    right = min(scores[2], scores[3])
+
+    return max(left, right)
+
+best_score = minimax(scores)
+
+print("Best score:", best_score)
