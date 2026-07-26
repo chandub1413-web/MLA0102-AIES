@@ -1,0 +1,9 @@
+1)Add the starting node to the queue.
+2)Give each node a heuristic value h(n).
+3)Here, h(n) is the estimated distance from the current node to the destination.
+4)Select the node having the lowest h(n).
+5)Add its neighbouring nodes to the queue.
+6)Repeat until the destination is reached.
+7)Display the path.
+
+Greedy Best-First Search uses only h(n)

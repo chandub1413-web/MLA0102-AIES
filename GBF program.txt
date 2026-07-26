@@ -1,0 +1,31 @@
+graph = {
+    'A': ['B', 'C'],
+    'B': ['D'],
+    'C': ['D'],
+    'D': []
+}
+
+h = {
+    'A': 4,
+    'B': 2,
+    'C': 3,
+    'D': 0
+}
+
+def greedy(start, goal):
+    queue = [(h[start], start, [start])]
+
+    while queue:
+        queue.sort()
+        value, node, path = queue.pop(0)
+
+        if node == goal:
+            print("Path:", path)
+            return
+
+        for next_node in graph[node]:
+            queue.append(
+                (h[next_node], next_node, path + [next_node])
+            )
+
+greedy('A', 'D')
