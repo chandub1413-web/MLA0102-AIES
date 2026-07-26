@@ -1,0 +1,29 @@
+graph = {
+    'A': [('B', 1), ('C', 4)],
+    'B': [('D', 3)],
+    'C': [('D', 1)],
+    'D': []
+}
+
+h = {'A': 4, 'B': 3, 'C': 1, 'D': 0}
+
+def astar(start, goal):
+    queue = [(0, start, [start])]
+
+    while queue:
+        cost, node, path = queue.pop(0)
+
+        if node == goal:
+            print("Optimal path:", path)
+            print("Total cost:", cost)
+            return
+
+        for next_node, edge_cost in graph[node]:
+            new_cost = cost + edge_cost
+            queue.append(
+                (new_cost, next_node, path + [next_node])
+            )
+
+        queue.sort(key=lambda x: x[0] + h[x[1]])
+
+astar('A', 'D')
