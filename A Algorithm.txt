@@ -1,0 +1,13 @@
+1)Start from the initial node.
+2)Add the starting node to the queue.
+3)Calculate:
+4)f(n)=g(n)+h(n)
+5)Here:
+6)g(n) = actual cost from the starting node.
+h(n) = estimated cost to reach the destination.
+f(n) = total estimated cost.
+7)Select the node having the lowest f(n).
+8)Add its neighbouring nodes to the queue.
+9)Calculate the new cost and path for every neighbour.
+10)Repeat until the destination is reached.
+11)Display the optimal path and its total cost.
