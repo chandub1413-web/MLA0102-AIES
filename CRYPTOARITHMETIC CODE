@@ -1,0 +1,41 @@
+from itertools import permutations
+
+def get_value(word, values):
+    number = ""
+    for letter in word:
+        number += str(values[letter])
+    return int(number)
+
+word1 = input("Enter first word: ").upper()
+word2 = input("Enter second word: ").upper()
+result = input("Enter result word: ").upper()
+
+letters = list(set(word1 + word2 + result))
+
+if len(letters) > 10:
+    print("More than 10 unique letters. No solution.")
+else:
+    found = False
+
+    for digits in permutations(range(10), len(letters)):
+        values = dict(zip(letters, digits))
+
+        # First letter cannot be zero
+        if values[word1[0]] == 0 or values[word2[0]] == 0 or values[result[0]] == 0:
+            continue
+
+        num1 = get_value(word1, values)
+        num2 = get_value(word2, values)
+        num3 = get_value(result, values)
+
+        if num1 + num2 == num3:
+            print("\nSolution:")
+            print(word1, "=", num1)
+            print(word2, "=", num2)
+            print(result, "=", num3)
+            print("Letter assignments:", values)
+            found = True
+            break
+
+    if not found:
+        print("No solution found.")
