@@ -1,0 +1,8 @@
+Algorithm
+Read the two words and the result word.
+Find all unique letters.
+Generate different digit assignments from 0–9.
+Ensure the first letter of each word is not zero.
+Convert each word into a number.
+Check whether word1 + word2 = result.
+Display the valid solution.
