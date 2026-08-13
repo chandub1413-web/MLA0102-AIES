@@ -1,0 +1,26 @@
+ALGORITHM MINIMAX
+
+1. Start at the root game state.
+2. Generate all possible moves.
+3. If the current state is a terminal state:
+      Return its score.
+4. If it is MAX's turn:
+      Select the maximum value.
+5. If it is MIN's turn:
+      Select the minimum value.
+6. Propagate the values back to the root.
+7. Select the move with the highest value.
+8. Stop.
+ALGORITHM ALPHA_BETA
+
+1. Start with Alpha = -∞ and Beta = +∞.
+2. Evaluate the game tree using Minimax.
+3. At a MAX node:
+      Update Alpha = max(Alpha, value).
+4. At a MIN node:
+      Update Beta = min(Beta, value).
+5. If Alpha >= Beta:
+      Prune the remaining branches.
+6. Continue until the root is evaluated.
+7. Select the best move.
+8. Stop.
